@@ -7,7 +7,7 @@ A comprehensive hands-on lab project demonstrating core Active Directory adminis
  
 ## Project Overview
  
-This lab simulates a small corporate network environment using Windows Server 2022 as a Domain Controller and Windows 11 as a client machine. The project covers fundamental AD operations that IT Help Desk professionals handle daily: user management, access control, policy deployment, and basic network diagnostics.
+This lab simulates a small corporate network environment using Windows Server 2022 as a Domain Controller and Client OS | Windows 11 Enterprise (VM - 90 day evaluation) as a client machine. The project covers fundamental AD operations that IT Help Desk professionals handle daily: user management, access control, policy deployment, and basic network diagnostics.
  
 **Why this project matters:** IT Help Desk roles heavily rely on Active Directory skills. This lab demonstrates you understand user provisioning, account troubleshooting, and group policy application—key responsibilities in any Windows environment.
  
@@ -43,7 +43,7 @@ By completing this project, I will gain practical knowledge in:
 |-----------|-----------|
 | **Virtualization** | VirtualBox |
 | **Server OS** | Windows Server 2022 |
-| **Client OS** | Windows 11 |
+| **Client OS** | Client OS | Windows 11 Enterprise (VM - 90 day evaluation) |
 | **Directory Service** | Active Directory Domain Services (AD DS) |
 | **Management Tools** | Group Policy Editor, Active Directory Users & Computers |
 | **Scripting** | PowerShell |
