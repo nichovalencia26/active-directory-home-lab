@@ -14,14 +14,14 @@ Set up a functional Active Directory environment by promoting Windows Server 202
 ---
 
 ## Environment
-| Component      | Details                                      |
-| -------------- | -------------------------------------------- |
-| Server OS      | Windows Server 2022                          |
+| Component      | Details                                        |
+| -------------- | ---------------------------------------------- |
+| Server OS      | Windows Server 2022                            |
 | Client OS      | Windows 11 Enterprise (VM - 90 day evaluation) |
-| Virtualization | VirtualBox                                   |
-| Network Mode   | Bridge                                       |
-| Server IP      | 192.168.1.10                                 |
-| Domain Name    | corp.local                                   |
+| Virtualization | VirtualBox                                     |
+| Network Mode   | Bridge                                         |
+| Server IP      | 192.168.1.10                                   |
+| Domain Name    | corp.local                                     |
 
 ---
 
@@ -41,7 +41,6 @@ and DNS are tied to this address — a change would break the entire domain.
 | Subnet Mask     | 255.255.255.0 (/24) |
 | Default Gateway | 192.168.1.1         |
 | Preferred DNS   | 192.168.1.10        |
-|                 |                     |
 
 ![configuracion de red](Screenshots/configuracion%20de%20red.png)
 
@@ -63,11 +62,11 @@ The role was installed through Server Manager using the Add Roles and Features
 wizard. During installation, the wizard prompted to add additional required 
 features — these were accepted and installed alongside AD DS.
 
-![wizard select](IT%20Labs/assets/screenshots/wizard%20select.png)
+![wizard select](Screenshots/wizard%20select.png)
 
 The service AD DS was added correctly.
 
-![complete AD DS](IT%20Labs/assets/screenshots/complete%20AD%20DS.png)
+![complete AD DS](Screenshots/complete%20AD%20DS.png)
 
 ---
 
@@ -82,7 +81,7 @@ to promote the server to a Domain Controller.
 Add a new forest was selected since this is a fresh environment with no existing 
 domain infrastructure. The root domain name was set to corp.local
 
-![new forest](IT%20Labs/assets/screenshots/new%20forest.png)
+![new forest](Screenshots/new%20forest.png)
 
 **Domain Controller Options**
 
@@ -91,7 +90,7 @@ DNS Server and Global Catalog were enabled automatically. A DSRM password
 was configured. This is an emergency recovery password used to restore 
 Active Directory if the domain becomes unavailable.
 
-![functional level and DSRM](IT%20Labs/assets/screenshots/functional%20level%20and%20DSRM.png)
+![functional level and DSRM](Screenshots/functional%20level%20and%20DSRM.png)
 
 **DNS Options**
 
@@ -99,7 +98,7 @@ A warning appeared stating that a DNS delegation could not be created because
 no authoritative parent zone was found. This is expected behavior in a lab 
 environment and was ignored.
 
-![Dns options](IT%20Labs/assets/screenshots/Dns%20options.png)
+![Dns options](Screenshots/Dns%20options.png)
 
 **Additional Options**
 
@@ -107,7 +106,7 @@ The NetBIOS name was automatically assigned as CORP based on the domain name
 corp.local. This is the short name used for legacy authentication — users can 
 log in as either CORP\username or username@corp.local.
 
-![NETBios domain name](IT%20Labs/assets/screenshots/NETBios%20domain%20name.png)
+![NETBios domain name](Screenshots/NETBios%20domain%20name.png)
 
 **Paths**
 
@@ -117,7 +116,7 @@ All AD DS database paths were left at their default locations:
 - Log files folder: C:\Windows\NTDS
 - SYSVOL folder: C:\Windows\SYSVOL
 
-![path](IT%20Labs/assets/screenshots/path.png)
+![path](Screenshots/path.png)
 
 **Review Options**
 
@@ -130,14 +129,14 @@ the installation. Key settings confirmed:
 - Global Catalog: Yes
 - DNS Server: Yes
 
-![review options](IT%20Labs/assets/screenshots/review%20options.png)
+![review options](Screenshots/review%20options.png)
 
 After installation completed the server restarted automatically. Upon login, 
 the screen displayed CORP\Administrator confirming the server was successfully 
 promoted to Domain Controller. Server Manager now shows AD DS and DNS as 
 active roles.
 
-![AD DS and DNS set](IT%20Labs/assets/screenshots/AD%20DS%20and%20DNS%20set.png)
+![AD DS and DNS set](Screenshots/AD%20DS%20and%20DNS%20set.png)
 
 ---
 
@@ -155,11 +154,11 @@ corresponding department OU.
 | HR      | Jane Alicante |
 | Finance | Bob Hallen    |
 
-![user IT](IT%20Labs/assets/screenshots/user%20IT.png)
+![user IT](Screenshots/user%20IT.png)
 
-![user HR](IT%20Labs/assets/screenshots/user%20HR.png)
+![user HR](Screenshots/user%20HR.png)
 
-![user Finance](IT%20Labs/assets/screenshots/user%20Finance.png)
+![user Finance](Screenshots/user%20Finance.png)
 
 ---
 
@@ -175,7 +174,7 @@ corresponding department OU.
 - **Result:** Account unlocked, temporary password issued
 - **Status:** Resolved
 
-![reset password jane alicante](IT%20Labs/assets/screenshots/reset%20password%20jane%20alicante.png)
+![reset password jane alicante](Screenshots/reset%20password%20jane%20alicante.png)
 
 **Ticket #002 — Disable Account**
 
@@ -186,7 +185,7 @@ corresponding department OU.
 - **Result:** Account disabled, user can no longer authenticate to the domain
 - **Status:** Resolved
 
-![Bob disable account](IT%20Labs/assets/screenshots/Bob%20disable%20account.png)
+![Bob disable account](Screenshots/Bob%20disable%20account.png)
 
 **Ticket #003 — Move User Between OUs**
 
@@ -197,7 +196,7 @@ corresponding department OU.
 - **Result:** User moved successfully
 - **Status:** Resolved
 
-![john was moved of OU](IT%20Labs/assets/screenshots/john%20was%20moved%20of%20OU%20.png)
+![john was moved of OU](Screenshots/john%20was%20moved%20of%20OU%20.png)
 
 ---
 
@@ -207,29 +206,29 @@ Before joining the domain, the DNS server on the Windows 11 VM was manually
 set to point to the Domain Controller at 192.168.1.10. This is required so 
 the client can locate and resolve the corp.local domain.
 
-![domain server set](IT%20Labs/assets/screenshots/domain%20server%20set.png)
+![domain server set](Screenshots/domain%20server%20set.png)
 
 This was confirmed by running ipconfig /all in the command prompt, verifying 
 that the DNS Server field shows 192.168.1.10.
 
-![Confirmation domain server set](IT%20Labs/assets/screenshots/Confirmation%20domain%20server%20set.png)
+![Confirmation domain server set](Screenshots/Confirmation%20domain%20server%20set.png)
 
 The computer was then joined to the domain through System Properties → 
 Computer Name → Change. The computer name was set to Windowsclient and 
 the domain corp.local was entered.
 
-![set domain](IT%20Labs/assets/screenshots/set%20domain.png)
+![set domain](Screenshots/set%20domain.png)
 
 After entering the Administrator credentials, a confirmation message appeared 
 welcoming the computer to the corp.local domain. The VM was restarted to 
 apply the changes.
 
-![domain connected](IT%20Labs/assets/screenshots/domain%20connected.png)
+![domain connected](Screenshots/domain%20connected.png)
 
 After the restart, login was performed using the domain user Jane Alicante, 
 confirming that domain authentication is working correctly end-to-end.
 
-![set jane alicante account](IT%20Labs/assets/screenshots/set%20jane%20alicante%20account%20.png)
+![set jane alicante account](Screenshots/set%20jane%20alicante%20account%20.png)
 
 ---
 
