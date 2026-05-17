@@ -42,7 +42,7 @@ and DNS are tied to this address — a change would break the entire domain.
 | Default Gateway | 192.168.1.1         |
 | Preferred DNS   | 192.168.1.10        |
 
-![configuracion de red](IT%20Labs/assets/screenshots/configuracion%20de%20red.png)
+![configuracion de red](IT%20Labs/screenshots/configuracion%20de%20red.png)
 
 The DNS was set to the server's own IP because after promoting it to Domain 
 Controller, AD installs its own DNS service. The server needs to point to 
