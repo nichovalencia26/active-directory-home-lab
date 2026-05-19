@@ -12,7 +12,7 @@
 Create and deploy Group Policy Objects (GPOs) to enforce security and 
 configuration settings across domain users. This lab demonstrates how 
 IT administrators use GPOs to manage user environments and apply security 
-policies at scale — a core skill in any Windows corporate environment.
+policies at scale, a core skill in any Windows corporate environment.
 
 ---
 
@@ -43,29 +43,29 @@ policies at scale — a core skill in any Windows corporate environment.
 
 ### 1. Opening Group Policy Management Console
 
-Group Policy Management Console (GPMC) was opened from Server Manager → 
-Tools → Group Policy Management. The console shows the full domain 
+Group Policy Management Console (GPMC) was opened from Server Manager - 
+Tools - Group Policy Management. The console shows the full domain 
 structure including all OUs where GPOs can be linked.
 
 ![2-1](Screenshots/2%20-%201%20.png)
 
 ---
 
-### 2. GPO 1 — Block Control Panel
+### 2. GPO 1 -- Block Control Panel
 
 A GPO was created and linked to the HR OU to prevent HR users from 
 accessing the Control Panel. This is a common restriction in corporate 
 environments to prevent users from modifying system settings.
 
-Right-clicked on the HR OU → Create a GPO in this domain and Link it here 
-→ Named it Block-Control-Panel.
+Right-clicked on the HR OU - Create a GPO in this domain and Link it here 
+- Named it Block-Control-Panel.
 
 ![2-2](Screenshots/2-2.png)
 
 ![2-3](Screenshots/2-3.png)
 
 The GPO was then edited. Navigating to:
-User Configuration → Policies → Administrative Templates → Control Panel`
+User Configuration - Policies - Administrative Templates - Control Panel`
 
 The policy **Prohibit access to Control Panel and PC Settings** was set 
 to **Enabled**.
@@ -90,7 +90,7 @@ confirming the GPO was applied successfully.
 
 ---
 
-### 3. GPO 2 — Corporate Wallpaper
+### 3. GPO 2 -- Corporate Wallpaper
 
 A GPO was created and linked to the HR OU to enforce a corporate desktop 
 wallpaper, preventing users from changing it. This is used in companies 
@@ -123,16 +123,16 @@ wallpaper was applied successfully and the user cannot change it.
 
 ---
 
-### 4. GPO 3 — Password Policy
+### 4. GPO 3 -- Password Policy
 
 A Password Policy GPO was created and linked to the entire corp.local domain 
 to enforce password security requirements for all users. Password policies 
-are a fundamental security control — weak passwords are one of the most 
+are a fundamental security control. Weak passwords are one of the most 
 common attack vectors in corporate environments.
 
 Navigating to:
-Computer Configuration → Policies → Windows Settings → Security Settings → 
-Account Policies → Password Policy
+Computer Configuration - Policies - Windows Settings - Security Settings - 
+Account Policies - Password Policy
 `
 ![2-13](Screenshots/2-13.png)
 
@@ -176,7 +176,7 @@ All three GPOs are now linked and enabled across the domain.
 
 A Group Policy Object (GPO) is a set of preventive rules applied to users 
 or Organizational Units to enforce company policies and security standards. 
-Before this lab, GPOs were just a concept — after building them hands-on, 
+Before this lab, GPOs were just a concept, after building them hands-on, 
 I understand how they work in practice.
 
 I learned that GPOs are created and managed through the Group Policy 
@@ -185,12 +185,12 @@ Editor, where you navigate to the specific setting you want to enforce and
 enable it. 
 
 I also understood the difference between linking a GPO to a specific OU 
-versus the entire domain. Linking to an OU gives you granular control — 
+versus the entire domain. Linking to an OU gives you granular control,
 for example, blocking Control Panel only for HR without affecting IT. 
 Linking to the domain applies the policy to everyone, which is appropriate 
 for something like a Password Policy that should affect all users.
 
-Finally, I learned that GPOs do not apply instantly — they refresh 
+Finally, I learned that GPOs do not apply instantly, they refresh 
 automatically every 90 minutes. In a Help Desk environment, `gpupdate /force` 
 is used to apply policies immediately when troubleshooting or verifying 
 that a new policy is working correctly.

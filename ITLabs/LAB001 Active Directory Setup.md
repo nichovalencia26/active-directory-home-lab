@@ -60,7 +60,7 @@ the server is just a regular Windows Server with no directory capabilities.
 
 The role was installed through Server Manager using the Add Roles and Features 
 wizard. During installation, the wizard prompted to add additional required 
-features — these were accepted and installed alongside AD DS.
+features, these were accepted and installed alongside AD DS.
 
 ![wizard select](Screenshots/wizard%20select.png)
 
@@ -103,7 +103,7 @@ environment and was ignored.
 **Additional Options**
 
 The NetBIOS name was automatically assigned as CORP based on the domain name 
-corp.local. This is the short name used for legacy authentication — users can 
+corp.local. This is the short name used for legacy authentication, users can 
 log in as either CORP\username or username@corp.local.
 
 ![NETBios domain name](Screenshots/NETBios%20domain%20name.png)
@@ -164,35 +164,35 @@ corresponding department OU.
 
 ### 5. Account Management — Simulated Help Desk Tickets
 
-**Ticket #001 — Password Reset**
+**Ticket #001 - Password Reset**
 
 - **User:** Jane Alicante
 - **Department:** HR
 - **Issue:** User locked out after multiple failed login attempts
-- **Action:** Located user in HR OU → Right-click → Reset Password → 
-  Set temporary password → Enabled "User must change password at next logon"
+- **Action:** Located user in HR OU - Right-click - Reset Password - 
+  Set temporary password - Enabled "User must change password at next logon"
 - **Result:** Account unlocked, temporary password issued
 - **Status:** Resolved
 
 ![reset password jane alicante](Screenshots/reset%20password%20jane%20alicante.png)
 
-**Ticket #002 — Disable Account**
+**Ticket #002 - Disable Account**
 
 - **User:** Bob Hallen
 - **Department:** Finance
 - **Issue:** Employee left the company, account must be disabled immediately
-- **Action:** Located user in Finance OU → Right-click → Disable Account
+- **Action:** Located user in Finance OU - Right-click - Disable Account
 - **Result:** Account disabled, user can no longer authenticate to the domain
 - **Status:** Resolved
 
 ![Bob disable account](Screenshots/Bob%20disable%20account.png)
 
-**Ticket #003 — Move User Between OUs**
+**Ticket #003 - Move User Between OUs**
 
 - **User:** John J. Patel
 - **Department:** IT (transferred to Finance)
 - **Issue:** Employee transferred departments, must be moved to correct OU
-- **Action:** Located user in IT OU → Right-click → Move → Selected Finance OU
+- **Action:** Located user in IT OU - Right-click - Move - Selected Finance OU
 - **Result:** User moved successfully
 - **Status:** Resolved
 
@@ -213,8 +213,8 @@ that the DNS Server field shows 192.168.1.10.
 
 ![Confirmation domain server set](Screenshots/Confirmation%20domain%20server%20set.png)
 
-The computer was then joined to the domain through System Properties → 
-Computer Name → Change. The computer name was set to Windowsclient and 
+The computer was then joined to the domain through System Properties -
+Computer Name - Change. The computer name was set to Windowsclient and 
 the domain corp.local was entered.
 
 ![set domain](Screenshots/set%20domain.png)
@@ -242,12 +242,12 @@ when applying security policies.
 
 The account management part connected directly to my Security+ knowledge. 
 Concepts like least privilege, account lifecycle, and access control are 
-things I studied for the exam — but resetting passwords, disabling accounts, 
+things I studied for the exam, but resetting passwords, disabling accounts, 
 and moving users between OUs showed me what those concepts look like in 
 practice on a daily Help Desk job.
 
 I also got more comfortable working with virtual machines and applying my 
-networking knowledge in a real scenario — configuring static IPs, setting 
+networking knowledge in a real scenario configuring static IPs, setting 
 DNS manually, and verifying connectivity between machines before joining 
 the domain. Seeing how everything depends on the network being correctly 
 configured before anything else works was a valuable lesson.
