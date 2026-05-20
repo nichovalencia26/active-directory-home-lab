@@ -49,6 +49,18 @@ This lab simulates a small corporate network environment using Windows Server 20
 - Understanding of ICMP timeout behavior in tracert results
 
  [View Lab Write-up](ITLabs/LAB003%20Network%20Troubleshooting.md)
+
+ ## Block 4 — Printer Management 
+
+**Skills demonstrated:**
+- Installation of Print and Document Services role on Windows Server 2022
+- Adding and configuring a network printer using Print Management Console
+- Selecting appropriate printer drivers for network environments
+- Sharing a printer across a Windows domain
+- Restricting printer access to specific domain users
+- Verifying printer connectivity from a domain-joined client machine
+
+[View Lab Write-up](ITLabs/LAB004%20Printer%20Management.md)
  
   ## Technologies & Tools that will be use
  
