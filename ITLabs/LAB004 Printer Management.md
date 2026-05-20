@@ -146,9 +146,6 @@ that jane.alicante can successfully connect to and use the network printer.
 - Verifying printer connectivity from a domain-joined client machine
 
 ---
-
-## What I Learned
-
 ## What I Learned
 
 This lab introduced me to printer management in a Windows Server environment,
